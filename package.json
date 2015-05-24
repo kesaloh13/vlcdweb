@@ -1,6 +1,6 @@
 {
   "name": "vlcd",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "express": "4.x",
     "serialport": "1.7.1",
