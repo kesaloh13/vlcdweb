@@ -1,0 +1,44 @@
+      html, body {height: 100%;}
+      html {overflow-y: hidden;}
+      body {overflow-y: scroll;}
+       
+      body {
+        background: url('bg.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+      }
+    
+      #LCD {
+        display: none;
+      }
+      #data {
+        font-family: Droid Sans Mono;
+        font-weight: bold;
+      }
+      @media all and (min-width: 350px) {
+        #data {
+        font-size: 14px;
+        }
+      }
+      @media all and (min-width: 370px) {
+       #data {
+        font-size: 18px;
+        }
+      }
+      @media all and (min-width: 400px) {
+       #data {
+        font-size: 20px;
+        }
+       }
+       
+       .jumbotron, #data {
+        background: rgb(0, 0, 0); /* This is for ie8 and below */
+        background: rgba(0, 0, 0, 0.75); 
+}
+
+      .glyphicon.glyphicon-one-fine-dot:before {
+       content: "\25cf";
+      font-size: 2.0em;
+      }
