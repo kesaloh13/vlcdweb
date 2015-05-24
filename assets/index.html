@@ -9,49 +9,7 @@
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
     <script src="/socket.io/socket.io.js"></script>
     <script type="text/javascript" src="/vlcdmain.js"></script>
-
-    
-    <style>
-      html, body {height: 100%;}
-      html {overflow-y: hidden;}
-      body {overflow-y: scroll;}
-       
-      body {
-        background: url('bg.jpg') no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;
-      }
-    
-      #LCD {
-        display: none;
-      }
-      #data {
-        font-family: Droid Sans Mono;
-        font-weight: bold;
-      }
-      @media all and (min-width: 350px) {
-        #data {
-        font-size: 14px;
-        }
-      }
-      @media all and (min-width: 370px) {
-       #data {
-        font-size: 18px;
-        }
-      }
-      @media all and (min-width: 400px) {
-       #data {
-        font-size: 20px;
-        }
-       }
-       
-       .jumbotron, #data {
-        background: rgb(0, 0, 0); /* This is for ie8 and below */
-        background: rgba(0, 0, 0, 0.75); 
-}
-    </style>
+    <link rel="stylesheet" href="/styles.css">
   </head>
   
   <body>
@@ -82,6 +40,11 @@
           <p class="text-center"><a id="btnOK" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></a></p>
         </div>
       </div>
+      <div class="col-xs-2 col-sm-1 col-md-1">&nbsp</div>
+        <div class="col-xs-8 col-md-5">
+          <p class="text-center"><span id="#statusled" class="glyphicon glyphicon-one-fine-dot"></span></p>
+        </div>
+        <div class="col-xs-1 col-md-1">&nbsp</div>
       <p></p>
       <!-- <p class="text-center"></p><a id="DisconnectBtn" class="btn btn-primary btn-xs">Disconnect</a></p> -->
     </div>

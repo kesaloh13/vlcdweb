@@ -53,22 +53,20 @@ io.sockets.on('connection', function (socket) {
 	var clientIp = socket.request.connection.remoteAddress
 	logMessage("Client connect from: " + clientIp);
 	// if there's a socket client, listen for new serial data:
-	myPort.write(["MC@",String.fromCharCode(13)].join(""));  
+	//myPort.write(["MC@",String.fromCharCode(13)].join(""));  
 	myPort.on('data', function (data) {
 		// set the value property of scores to the serial string:
 		if (data.slice(1,2)!="<") {
-			serialData.value= "Waiting for data ...";
+			serialData.value = "Waiting for data ...";
 			myPort.write(["MC@",String.fromCharCode(13)].join(""));
 		} else {	
-			data = [data.slice(2,24),"<br>",data.slice(24,40),"<br>",data.slice(40,56)].join("");
-			serialData.value = data.replace(/\�/g,"&deg;").replace(/\x04/g,">").replace(/\x06/g,"&plusmn;").replace(/\x05/g,"&radic;").replace(/\x01/g,"|").replace(/\x02/g,"|").replace(/\x03/g,"|").replace(/ /g,"&nbsp;");
+			var dataSend = [data.slice(2,3),data.slice(4,5),data.slice(6,7),data.slice(8,24),"<br>",data.slice(24,40),"<br>",data.slice(40,56)].join("");
+			serialData.value = dataSend.replace(/\�/g,"&deg;").replace(/\x04/g,">").replace(/\x06/g,"&plusmn;").replace(/\x05/g,"&radic;").replace(/\x01/g,"|").replace(/\x02/g,"|").replace(/\x03/g,"|").replace(/ /g,"&nbsp;");
 		}
 
-		// send a serial event to the web client with the data (only if data has changed)
-		if (serialData!=serialDataPrev) { 
-			socket.emit('serialEvent', serialData);
-			serialDataPrev=serialData;
-		}
+		// send a serial event to the web client with the data
+		socket.emit('serialEvent', serialData);
+
 	});
 	socket.on('navigation', function (navigation) {
 		//logMessage(navigation);
@@ -79,7 +77,7 @@ io.sockets.on('connection', function (socket) {
 	
 	//Client disconnects
 	socket.on('disconnect', function () {
-		logMessage("Client disconnect from: " + clientIp);
+	logMessage("Client disconnect from: " + clientIp);
 	})
 });
 
