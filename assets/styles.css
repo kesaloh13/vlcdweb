@@ -10,9 +10,6 @@
         -o-background-size: cover;
       }
     
-      #LCD {
-        display: true;
-      }
       #datatext {
         font-family: Droid Sans Mono;
         font-weight: bold;
@@ -58,7 +55,7 @@
 		}
        }
        
-       #panel, #start {
+       #panel {
         background: rgb(0, 0, 0); /* This is for ie8 and below */
         background: rgba(0, 0, 0, 0.75); 
 }

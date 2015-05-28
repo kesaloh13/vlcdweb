@@ -8,10 +8,10 @@
           var lcdKeypressed=data.value[2];
           
           if (lcdBacklight=="1") {
-            $("#data").css("background", "rgba(0, 0, 0, 0.75)");
+            $("#panel").css("background", "rgba(0, 0, 0, 0.75)");
           } else
           {
-            $("#data").css("background", "rgba(0, 0, 0, 1)");
+            $("#panel").css("background", "rgba(0, 0, 0, 1)");
           }
           
           switch (lcdStatus) {
