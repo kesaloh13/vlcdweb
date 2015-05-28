@@ -11,34 +11,68 @@
       }
     
       #LCD {
-        display: none;
+        display: true;
       }
-      #data {
+      #datatext {
         font-family: Droid Sans Mono;
         font-weight: bold;
+		margin-top: 15px;
+		margin-bottom: 15px;
+
+.btn {
+		
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+
       }
-      @media all and (min-width: 350px) {
-        #data {
-        font-size: 14px;
+      @media all and (min-width: 100px) {
+        #datatext {
+        font-size: 12px;
         }
       }
-      @media all and (min-width: 370px) {
-       #data {
+	  
+	  @media all and (min-width: 300px) {
+        #datatext {
         font-size: 18px;
         }
       }
-      @media all and (min-width: 400px) {
-       #data {
-        font-size: 20px;
+      @media all and (min-width: 350px) {
+       #datatext {
+        font-size: 21px;
         }
+		.btn {
+			font-size: 12px;
+			margin-top: 3px;
+			margin-bottom: 3px;
+		}
+      }
+      @media all and (min-width: 400px) {
+       #datatext {
+        font-size: 26px;
+        }
+		.btn {
+			font-size: 14px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
        }
        
-       .jumbotron, #data {
+       #panel, #start {
         background: rgb(0, 0, 0); /* This is for ie8 and below */
         background: rgba(0, 0, 0, 0.75); 
 }
+
+		#start {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 
       .glyphicon.glyphicon-one-fine-dot:before {
        content: "\25cf";
       font-size: 2.0em;
       }
+
+	
