@@ -1,8 +1,8 @@
  $(document).ready(function() {
-        var socket = io.connect(window.location.href);
+        var socket = io.connect();
         socket.on('serialEvent', function (data) {
           var displayData=data.value.slice(3, data.value.length);
-          $("#datatext").html(displayData)
+          $("#datatext").html(displayData);
           var lcdBacklight=data.value[0];
           var lcdStatus=data.value[1];
           var lcdKeypressed=data.value[2];
@@ -28,7 +28,7 @@
               $(".glyphicon.glyphicon-one-fine-dot").css("color", "#77b300");
             break;
             
-            default: return
+            default: return;
           } 
          
          switch (lcdKeypressed) {
@@ -67,12 +67,7 @@
            
            default: return;
          }
-         
-         
-          
-          
-          
-				});
+});
                 
 /* Event handler for button click */
       
@@ -80,10 +75,10 @@
           $("#start").hide();
           $("#LCD").show();
        });
-
+     
 function sendData(data) {
   socket.emit('navigation',data)
-};
+}
 
 
 $(document).on("keydown", function(event) {
@@ -113,7 +108,7 @@ $(document).on("keydown", function(event) {
       default: return;
     }
   event.preventDefault();
-})
+});
 
         
                     
@@ -146,5 +141,9 @@ $(document).on("keydown", function(event) {
           sendData(4);  
         });
 
-      });
-       
+
+        $("#btnRefresh").click(function() {
+            location.reload();
+        });
+
+});

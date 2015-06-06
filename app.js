@@ -1,5 +1,5 @@
 /*
-	vlcd.js 1.0.1, (c) Michael Holasek, 24.5.2015
+	vlcd.js 1.0.2, (c) Michael Holasek, 6.6.2015
 */
 
 var conf = require('./config.json');
@@ -15,7 +15,7 @@ var server = require('http').Server(app);
 var io = require('socket.io')(server);
 var favicon = require('serve-favicon');
 
-logMessage("Connecting to serialport: " + conf.serialport + " ...")
+logMessage("Connecting to serialport: " + conf.serialport + " ...");
 
 /* Open serial interface - Change the name of the port in config.json */ 
 // open the serial port. 
@@ -50,7 +50,7 @@ app.use(favicon(__dirname + '/assets/favicon.ico'));
 
 // listen for new socket.io connections:
 io.sockets.on('connection', function (socket) {
-	var clientIp = socket.request.connection.remoteAddress
+	var clientIp = socket.request.connection.remoteAddress;
 	logMessage("Client connect from: " + clientIp);
 	// if there's a socket client, listen for new serial data:
 	//myPort.write(["MC@",String.fromCharCode(13)].join(""));  
@@ -78,7 +78,7 @@ io.sockets.on('connection', function (socket) {
 	//Client disconnects
 	socket.on('disconnect', function () {
 	logMessage("Client disconnect from: " + clientIp);
-	})
+	});
 });
 
 function logMessage(message) {

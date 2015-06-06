@@ -7,8 +7,7 @@
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootswatch/3.0.0/cyborg/bootstrap.min.css">
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-        <link href="http://fonts.googleapis.com/css?family=Droid+Sans+Mono"
-        rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet" type="text/css">
         <script src="/socket.io/socket.io.js"></script>
         <script type="text/javascript" src="vlcdmain.js"></script>
         <link rel="stylesheet" href="styles.css">
@@ -16,8 +15,9 @@
     
     <body>
         <div id="LCD" class="container">
-            <h1 id="start">Virtual LCD</h1>
-            <div class="row">
+            <h1 id="start">Virtual LCD&nbsp;&nbsp;<a id="btnRefresh" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-refresh"> Refresh</span></a></h1>
+            
+            <div id="lcdgrid" class="row">
                 <div class="col-xs-2 col-sm-1 col-md-1">
                     <p class="text-center">
                         <a id="btn1" class="btn btn-success"><b>&nbsp;1&nbsp;</b></a>
@@ -30,6 +30,7 @@
                     <p id="datatext" class="text-left">Waiting for data
                         <br>...
                         <br>&nbsp;</p>
+                    
                 </div>
                 <div class="col-xs-1 col-md-1">
                     <p class="text-center">
@@ -47,7 +48,6 @@
             </div>
             <div class="col-xs-1 col-md-1">&nbsp;</div>
             <p></p>
-            <!-- <p class="text-center"></p><a id="DisconnectBtn" class="btn btn-primary btn-xs">Disconnect</a></p> -->
         </div>
     </body>
 

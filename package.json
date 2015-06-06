@@ -1,11 +1,12 @@
 {
   "name": "vlcd",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "dependencies": {
-    "express": "4.x",
-    "serialport": "1.7.1",
+    "express": "^4.12.4",
+    "forever": "^0.14.1",
+    "serialport": "^1.7.4",
     "serve-favicon": "^2.2.1",
-    "socket.io": "1.3.5"
+    "socket.io": "^1.3.5"
   },
   "repository": {
     "type": "git",
