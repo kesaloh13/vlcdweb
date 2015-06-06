@@ -2,6 +2,8 @@
 Virtual LCD - node.js for ristretto! espresso PID firmware for manual expresso machines
 Tested with Raspberry Pi - RASPIAN - Easy Kit 2 - Connected via USB (/dev/ttyUSB0)
 
+![alt tag](https://raw.githubusercontent.com/kesaloh13/vlcdweb/master/screenshot.png)
+
 ##Qick start (Installation)
 ###Linux
 - Clone or download the repo: `git clone https://github.com/kesaloh13/vlcdweb`.
