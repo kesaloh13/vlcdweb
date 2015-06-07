@@ -36,6 +36,3 @@ You can use it with a HTML5 compatible browser on different devices. E.g. Androi
 Tested devices:
 - Samsung Galaxy Note 3: Android Browser and Chrome
 - Windows 8.1: Firefox, Chrome, Internet Explorer 11
-- 
-
-
