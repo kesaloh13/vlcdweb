@@ -31,8 +31,14 @@ You can use it with a HTML5 compatible browser on different devices. E.g. Androi
 - Connect your computer or embedded device (e.g. raspberry pi) via serial interface to the coffee machine
 - Connect the  device to your network (lan or wifi)
 - Open the address "http://computername:8080" on one of your devices (e.g. smartphone). Replace computername with the name or ip address of the device connected to the coffee machine.
+- Tip: If you have a keyboard on your device you can use cursor up and down, ESC and Enter to navigate instead of using the buttons.
 
-###Compatibility
-Tested devices:
+#Compatibility
+##Tested client devices:
 - Samsung Galaxy Note 3: Android Browser and Chrome
 - Windows 8.1: Firefox, Chrome, Internet Explorer 11
+- ... Please tell me if you tested it successfully on other devices
+
+##Tested server devices:
+- Raspberry pi B+ (Model 1) with raspbian
+- Windows 8.1, 64bit
