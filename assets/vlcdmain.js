@@ -127,7 +127,7 @@
       }
   });
   
-  /*Send data on keypress*/
+  /*Send navigaton on keypress*/
   $(document).on("keydown",function(event){
       pressedKey=event.which;
       if ($.inArray(pressedKey, btncode.key)) {
@@ -142,18 +142,23 @@
       return false;
   });
   
+  /*Scroll wheel event*/
   $("#datatext").on( 'DOMMouseScroll mousewheel', function ( event ) {
-  if( event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0 ) { //alternative options for wheelData: wheelDeltaX & wheelDeltaY
-    //scroll down
-    sendData(btncode.btn.btnDown);
-    sendData(0);
-  } else {
-    //scroll up
-    sendData(btncode.btn.btnUp);
-    sendData(0);
-  }
-  //prevent page fom scrolling
-  return false;
-});
+    if( event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0 ) { //alternative options for wheelData: wheelDeltaX & wheelDeltaY
+      //scroll down
+      sendData(btncode.btn.btnDown);
+      sendData(0);
+    } else {
+      //scroll up
+      sendData(btncode.btn.btnUp);
+      sendData(0);
+    }
+    //prevent page fom scrolling
+    return false;
+  });
+
+  $("#btnRefresh").click(function(){
+    location.reload();
+  })
 
 }); //document ready
