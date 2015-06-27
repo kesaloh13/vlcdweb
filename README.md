@@ -31,7 +31,16 @@ You can use it with a HTML5 compatible browser on different devices. E.g. Androi
 - Connect your computer or embedded device (e.g. raspberry pi) via serial interface to the coffee machine
 - Connect the  device to your network (lan or wifi)
 - Open the address "http://computername:8080" on one of your devices (e.g. smartphone). Replace computername with the name or ip address of the device connected to the coffee machine.
-- Tip: If you have a keyboard on your device you can use cursor up and down, ESC and Enter to navigate instead of using the buttons.
+- Navigation is possible with following methods:
+Event                  | Behavior
+--------------------------------------------------------------------------
+Touch/click button     | Sends the command
+Hold button            | Touch/click and hold button will repeate command
+Click on display       | Sends OK
+Right click (mouse)    | Sends ESC
+Mouse wheel            | Sends up/down command
+Keyboard up/down       | Sends up/down command
+Keyboard ESC/Enter     | Sends Back and OK command
 
 #Compatibility
 ##Tested client devices:
