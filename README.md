@@ -32,8 +32,9 @@ You can use it with a HTML5 compatible browser on different devices. E.g. Androi
 - Connect the  device to your network (lan or wifi)
 - Open the address "http://computername:8080" on one of your devices (e.g. smartphone). Replace computername with the name or ip address of the device connected to the coffee machine.
 - Navigation is possible with following methods:
+
 Event                  | Behavior
---------------------------------------------------------------------------
+---------------------- | -------------------------------------------------
 Touch/click button     | Sends the command
 Hold button            | Touch/click and hold button will repeate command
 Click on display       | Sends OK
