@@ -1,5 +1,5 @@
 /*
-	vlcd.js 1.0.2, (c) Michael Holasek, 6.6.2015
+	vlcd.js 1.0.3, (c) Michael Holasek, 27.6.2015
 */
 
 var conf = require('./config.json');
@@ -57,7 +57,7 @@ io.sockets.on('connection', function (socket) {
 	myPort.on('data', function (data) {
 		// set the value property of scores to the serial string:
 		if (data.slice(1,2)!="<") {
-			serialData.value = "Waiting for data ...";
+			serialData.value = "Connection established.<br>Waiting for data ...";
 			myPort.write(["MC@",String.fromCharCode(13)].join(""));
 		} else {	
 			var dataSend = [data.slice(2,3),data.slice(4,5),data.slice(6,7),data.slice(8,24),"<br>",data.slice(24,40),"<br>",data.slice(40,56)].join("");
@@ -66,13 +66,11 @@ io.sockets.on('connection', function (socket) {
 
 		// send a serial event to the web client with the data
 		socket.emit('serialEvent', serialData);
-
 	});
 	socket.on('navigation', function (navigation) {
 		//logMessage(navigation);
 		//Send MC#\r to serialport where #=button Code
 		myPort.write(String.fromCharCode(77,67,navigation,13));
-		myPort.write(String.fromCharCode(77,67,0,13));
 	});
 	
 	//Client disconnects

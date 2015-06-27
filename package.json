@@ -1,6 +1,6 @@
 {
   "name": "vlcdweb",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "dependencies": {
     "express": "^4.12.4",
     "forever": "^0.14.1",

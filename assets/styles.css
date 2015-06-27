@@ -8,6 +8,13 @@
         -moz-background-size: cover;
         background-size: cover;
         -o-background-size: cover;
+        cursor: default;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
       }
     
       #datatext {
@@ -58,7 +65,8 @@
        
        #panel {
         background: rgb(0, 0, 0); /* This is for ie8 and below */
-        background: rgba(0, 0, 0, 0.75); 
+        background: rgba(0, 0, 0, 0.75);
+        cursor: pointer;
 }
 
 		#start {

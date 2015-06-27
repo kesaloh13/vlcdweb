@@ -1,0 +1,14 @@
+Changelog for virtual LCD Web
+
+V1.0.0
+- Intitial release
+
+V1.0.0-1.0.2
+- Stabilization
+- Code cleanup
+
+V1.0.3
+- Left and middle click with mouse on display sends OK, right click sends ESC
+- Touch on display sends OK
+- Scrollwheel of mouse on display sends UP and DOWN
+- If user taps/clicks and hold the key will repeat (to switch between values and to add functionality for reseting - e.g. hold OK to reset kW/h counter)
