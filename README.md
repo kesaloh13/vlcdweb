@@ -6,7 +6,7 @@ Virtual LCD - node.js for ristretto! espresso PID firmware for manual espresso m
 ##Qick start (Installation)
 ###Linux
 - Clone or download the repo: `git clone https://github.com/kesaloh13/vlcdweb`.
-- Install node: `sudo apt-get node`.
+- Install node: `sudo apt-get install node`.
 - Change into vlcdweb directory
 - Install dependencies: `npm install` (be patient, takes a while on raspi / 5 to 10 minutes)
 - Check config file `config.json` for proper configuration of serial device (e.g. /dev/ttyUSB0)
