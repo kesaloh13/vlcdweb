@@ -12,7 +12,7 @@ Virtual LCD - node.js for ristretto! espresso PID firmware for manual espresso m
 - Check config file `config.json` for proper configuration of serial device (e.g. /dev/ttyUSB0)
 - Start app:  `node app.js`
 - Connect with browser: `http://computername:8080`
-- If everything works correctly you can install it as a service `node_modules/initd-forever/bin/initd-forever.js -n vlcdweb -a ~/vlcdweb/app.js -f ~/vlcdweb/node_modules/forever/bin/forever` and `sudo chdmod 755 vlcdweb` and `sudo cp vlcdweb /etc/init.d` and `sudo update-rc.d vlcdweb defaults`
+- If everything works correctly you can install it as a service `node_modules/initd-forever/bin/initd-forever.js -n vlcdweb -a ~/vlcdweb/app.js -f ~/vlcdweb/node_modules/forever/bin/forever` and `sudo chmod 755 vlcdweb` and `sudo cp vlcdweb /etc/init.d` and `sudo update-rc.d vlcdweb defaults`
 
 
 ###Windows
